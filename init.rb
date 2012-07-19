@@ -15,6 +15,18 @@ class Heroku::Command::Dashboard < Heroku::Command::Base
     end
   end
 
+  # dashboard:history
+  #
+  # opens the history dashboard for an app
+  #
+  #
+  def history
+    if app = optional_app
+      Launchy.open("https://dashboard.heroku.com/apps/#{app}/history")
+    else
+      Launchy.open("https://dashboard.heroku.com/history")
+    end
+  end
 
 private
 
