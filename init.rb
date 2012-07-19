@@ -1,5 +1,4 @@
 require "heroku/command/base"
-require "launchy"
 
 class Heroku::Command::Dashboard < Heroku::Command::Base
 
@@ -8,6 +7,8 @@ class Heroku::Command::Dashboard < Heroku::Command::Base
   # opens the heroku dashboard for an app
   #
   def index
+    require "launchy"
+
     if app = optional_app
       Launchy.open("https://dashboard.heroku.com/apps/#{app}")
     else
@@ -20,6 +21,8 @@ class Heroku::Command::Dashboard < Heroku::Command::Base
   # opens the history dashboard for an app
   #
   def history
+    require "launchy"
+
     if app = optional_app
       Launchy.open("https://dashboard.heroku.com/apps/#{app}/history")
     else
