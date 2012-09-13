@@ -16,17 +16,17 @@ class Heroku::Command::Dashboard < Heroku::Command::Base
     end
   end
 
-  # dashboard:history
+  # dashboard:activity
   #
-  # opens the history dashboard for an app
+  # opens the activity dashboard for an app
   #
-  def history
+  def activity
     require "launchy"
 
     if app = optional_app
-      Launchy.open("https://dashboard.heroku.com/apps/#{app}/history")
+      Launchy.open("https://dashboard.heroku.com/apps/#{app}/activity")
     else
-      Launchy.open("https://dashboard.heroku.com/history")
+      Launchy.open("https://dashboard.heroku.com/activity") # doesn't work yet, but hey
     end
   end
 
