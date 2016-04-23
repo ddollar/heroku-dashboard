@@ -1,9 +1,5 @@
-# heroku-dashboard
+# Deprecated
 
-## Installation
+This project is deprecated and is no longer being maintained.
 
-    $ heroku plugins:install https://github.com/ddollar/heroku-dashboard.git
-    
-## Usage
-
-    $ heroku dashboard -a myapp
+Please check out my current project [Convox](https://convox.com) for all of your deployment needs!
